@@ -1,0 +1,47 @@
+.fachada {
+
+    width: 60%;
+height: 500px;
+background: black;
+margin: 100px auto;
+position: relative;
+top: 150px
+}
+.ventana{
+
+   width: 30%;
+   height: 200px;
+   background: yellow;
+   position: absolute;
+   right: 450px;
+   top: 60px;
+
+}
+
+.puerta {
+    width: 20%;
+    height: 200px;
+    background: blue;
+    position: absolute;
+    bottom: 0;
+    right: 280px;
+}
+
+.chimenea {
+     width: 150px;
+     height: 250px;
+     background: pink;
+     position: absolute;
+     top: -250px;
+     bottom: 0;
+
+}
+
+.techo {
+    border-top:375px solid transparent;
+    border-bottom: 375px solid red;
+    border-left: 375px solid transparent;
+    border-right: 375px solid transparent ; 
+    position: absolute;
+    top: -750px
+}

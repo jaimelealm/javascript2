@@ -1,0 +1,115 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+header{
+	height: 70px;
+	background: lightblue;
+	padding-top: 20px;
+	padding-left: 50px;
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+}
+figure{
+	width: 200px;
+	float: left;
+}
+.navegacion-principal{
+	float: right;
+	margin-top: 25px;
+	z-index: 11;
+}
+.navegacion-principal li{
+	display: inline-block;
+	padding: 10px;
+	background: purple;
+	margin: 5px;
+	border-radius: 8px;
+}
+.navegacion-principal li ul{
+	position: absolute;
+	display: none;
+}
+.navegacion-principal li ul li{
+	display: block;
+}
+.navegacion-principal li:hover{
+	background: black;
+}
+.navegacion-principal li:hover ul{
+	display: block;	
+}x
+.navegacion-principal li a{
+	text-decoration: none;
+	color: white;
+}
+.formulario-buscar{
+	float: left;
+	position: relative;
+	top: 20px;
+}
+.formulario-buscar #cuadro-busqueda{
+	padding: 10px;
+	width: 200px;
+}
+.formulario-buscar #buscar{
+	padding: 10px;
+	background: white;
+}
+#banner{
+	height: 150px;
+	background: gray;
+}
+#banner h1{
+	color: white;
+	font-size: 70px;
+	text-align: center;
+	border-width: 10px;
+	border-style: none;
+	border-color: orange;
+	position: relative;
+	top: 80px;
+	left:0;
+	z-index: 9;
+}
+#galeria{
+	width: 70%;
+	background: yellow;
+	float: left;
+	height: 700px;
+
+}
+article{
+	width: 42%;
+	float: left;
+	border: 1px solid orange;
+	margin: 20px;
+	padding: 10px;
+	height: 280px;
+	overflow: hidden;
+}
+article img{
+	width: 200px;
+	float: right;
+}
+aside{
+	height: 700px;
+	width: 30%;
+	background: pink;
+	float: right;
+}
+footer{
+	height: 30px;
+	background: black;
+	text-align: center;
+	clear: both;
+	color: white;
+}
+.imagenoculta{
+	visibility: hidden;
+}
+article h2:hover img{
+	visibility: visible;	
+}

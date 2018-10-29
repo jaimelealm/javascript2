@@ -1,0 +1,34 @@
+<html>
+    <script>
+        var n=0;
+        function agregar(){
+            let resultados=document.get.ElementById("resultados");
+            n++
+            resultados.innerHTML+=n+" - "+document.formulario.subtotal.value+"<br>";
+            document.formulario.reset();
+            document.getElementById("resumen").innerHTML=n+" productos procesados";
+        }
+        function calcular(){
+            let precio=parsefloat(document.formulario.precio.value);
+            let cantidad=parseInt(document.formulario.cantidad.value);
+            let subtotal=precio*cantidad;
+            document.formulario.subtotal.value=subtotal.toFixed(2);
+        }
+    </script>
+    <body>
+        <h1>DATOS</h1>
+        <form name="formulario">
+            Precio <br>
+            <imput type="text" name="precio"/><br>
+            Cantidad <br>
+            <imput type="text" name="precio"/><br>
+            Subtotal <br>
+            <imput type="text" name="precio"/><br>
+            <imput type="button" value="procesar" onclick="calcular()"/><br>
+        </form>
+        <div Id="resultados">
+            <h1>Resultados</h1>
+        </div>
+        <p ID="resumen">0 productos procesados</p>
+    </body>
+</html>

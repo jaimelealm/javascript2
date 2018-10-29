@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 y CSS3 nivel II</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<script>
+	function modificarbanner(){
+		let banner=document.getElementById("banner");
+		let elemento=document.getElementById("elemento");
+		let navegacionprincipal=document.getElementByClass("navegacion-principal");
+		elemento.innerHTML="Cambio";
+		if (banner==undefined){
+			console.log("Error... no se encuentra el ID Banner");
+		}
+		else{
+			banner.innerHTML+="<br><br><br><h1>Esto es nuevo</h1>";
+			banner.style.backgroundColor="red"
+			elemento.innerHTML="Cambio";
+			if (navegacionprincipal.style.backgroundColor=="blue"){
+				navegacionprincipal.style.backgroundColor="red";
+			}
+			else{ 
+				navegacionprincipal.style.backgroundColor="blue";	
+			}	
+		}
+	}
+</script>
+<body>
+	<header>
+		<figure>
+			<img src="img/logo.png" alt="Logo" title="Logo">
+		</figure>
+		<form name="formulario-buscar" class="formulario-buscar">
+			<input type="text" name="cuadro-busqueda" id="cuadro-busqueda" placeholder="&#128270; Escriba una palabra clave">
+			<input type="button" onclick="modificarbanner()" name="buscar" id="buscar" value="Buscar">
+		</form>
+		<nav class="navegacion-principal">
+			<ul>
+				<li><a href="#" id="elemento">Inicio</a></li>
+				<li>
+					<a href="#">Servicios</a>
+					<ul>
+						<li><a href="#">Cursos</a></li>
+						<li><a href="#">Alquiler</a></li>
+						<li><a href="#">Asesoramiento</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Quiénes somos</a></li>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id="banner">
+		<h1>CADI F1</h1>
+	</section>
+	<section id="galeria">
+		<article>
+			<img src="img/imagen01.jpg" alt="Imagen del artículo" title="imagen del artículo" class="imagenoculta">
+			<h2>Imagen 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+		<article>
+			<img src="img/imagen02.jpg" alt="Imagen del artículo" title="imagen del artículo">
+			<h2>Imagen 2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+		<article>
+			<img src="img/imagen03.jpg" alt="Imagen del artículo" title="imagen del artículo">
+			<h2>Imagen 3</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+		<article>
+			<img src="img/imagen04.jpg" alt="Imagen del artículo" title="imagen del artículo">
+			<h2>Imagen 4</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+	</section>
+	<aside></aside>
+	<footer>
+		<p>Todos los derechos reservados para CADI F1</p>
+	</footer>
+</body>
+</html>
