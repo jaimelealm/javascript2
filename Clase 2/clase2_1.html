@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body >
+        <script>
+            function convertirMayusculas(id){
+                var x = document.getElementById(id);
+                if (x!=undefined){
+                    x.value=x.value.toUpperCase();
+                    x.style.backgroundColor="white"
+                }                
+            }
+            function convertirMinusculas(id){
+                var x = document.getElementById(id);
+                if (x!=undefined){
+                    x.value=x.value.toLowerCase();
+                    x.style.backgroundColor="green"
+                }   
+            }
+        </script>
+        <h2>Iniciar Sesión</h2>
+        <form name="form1">
+            <input 
+                type="text"
+                id="idNombre" 
+                name="nombre"
+                onfocus="convertirMinusculas('idNombre')" 
+                placeholder="Nombre"
+                onblur="convertirMayusculas('idNombre')" /> <br>
+            <input 
+                type="text" 
+                id="usuario"
+                name="usuario"
+                onfocus="convertirMinusculas('usuario')" 
+                placeholder="Usuario"
+                onblur="convertirMayusculas('usuario')" /> <br>
+            <input type="password" name="clave" placeholder="clave" /> <br><br>
+            <input type="button" name="iniciar" value="Iniciar Sesión" />
+        </form>
+    </body>
+</html>
