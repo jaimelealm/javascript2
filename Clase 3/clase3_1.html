@@ -1,0 +1,50 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script src="lib_validaciones.js"></script>
+        
+        <h2>Datos</h2>
+        <form name="form1">
+            Nombre <br>
+            <input type="text" name="nombre"/><br>
+            Correo <br>
+            <input type="text" name="correo"/><br>
+            Ciudad <br>
+            <select name="ciudad">
+                <option>Barquisimeto</option>
+                <option>Cabudare</option>
+                <option>Caracas</option>
+            </select> <br>
+            Sexo <br>
+            <input type="radio" name="sexo" value="1" checked/>M
+            <input type="radio" name="sexo" value="2" />F <br><br>
+            <input type="checkbox" name="acepto" />
+            Acepto las condiciones <br><br>
+            <input 
+                type="button" 
+                value="Registrar" 
+                onclick="procesar()" />
+        </form>
+        <script>
+        document.form1.ciudad.selectedIndex=-1;
+        function procesar(){
+            if (validar()){
+                alert("Se proceso exitosamente..");
+            }
+        }
+        function validar(){
+            if (!esta_vacio(document.form1.nombre,
+                            "Debe escribir el nombre"))
+                if (validarcorreo(document.form1.correo))
+                    if (validar_select(document.form1.ciudad))
+                        if (validar_opcion(document.form1.sexo))
+                            if (validar_check(document.form1.acepto))
+                                return true
+                            else    
+                                return false;
+        }
+        </script>
+    </body>
+</html>
